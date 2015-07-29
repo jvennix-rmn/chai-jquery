@@ -11,6 +11,16 @@ Include `chai-jquery.js` in your test file, after `chai.js` (version 1.0.0-rc1 o
 <script src="chai-jquery.js"></script>
 ```
 
+If you are using an AMD like requirejs, you can pull in chai-jquery as a dependency, and it will return an initialization function that can be passed to chai:
+
+```js
+require([
+  'chai-jquery'
+], function(chaiJquery) {
+  chai.use(chaiJquery);
+});
+```
+
 Use the assertions with chai's `expect` or `should` assertions.
 
 ## Assertions
